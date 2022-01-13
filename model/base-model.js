@@ -5,11 +5,11 @@
  */
 
 module.exports = {
-  createdAt: {
+  createdDate: {
     type: Date,
     default: Date.now
   },
-  updatedAt: {
+  updateDate: {
     type: Date,
     default: Date.now
   }

@@ -5,6 +5,6 @@
  */
 
 module.exports = {
-  dbUri: 'mongodb://localhost:27017/realworld',
+  dbUri: 'mongodb://localhost:27017/vite-vue-server',
   jwtSecret: '13a054c8-39ea-11eb-adc1-0242ac120002'
 }

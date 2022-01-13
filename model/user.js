@@ -17,11 +17,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  bio: {
-    type: String,
-    default: null
-  },
-  image: {
+  role: {
     type: String,
     default: null
   }

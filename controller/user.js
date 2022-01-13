@@ -16,7 +16,7 @@ exports.login = async (req, res, next) => {
 
   try {
     let user = await User.findOne({ username: req.body.data.username })
-      .select(['username', 'bio', 'image'])
+      .select(['username', 'role'])
     const token = await jwt.sign({
       userId: user._id
     }, jwtSecret, {
@@ -38,7 +38,7 @@ exports.login = async (req, res, next) => {
 // 用户注册
 exports.register = async (req, res, next) => {
   try {
-    let user = new User(req.body.user)
+    let user = new User(req.body.data)
     await user.save()
     res.status(200).json({
       isSuccess: true,
